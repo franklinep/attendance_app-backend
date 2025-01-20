@@ -34,6 +34,7 @@
       "@users/*": ["./src/features/users/*"],
       "@auth/*": ["./src/features/auth/*"],
       "@attendance/*": ["./src/features/attendance/*"],
+      "@laboratories/*": ["./src/features/laboratories/*"],
       "@utils/*": ["./src/utils/*"],
       "@libs/*": ["./src/libs/*"],
       "@middlewares/*": ["./src/api/v1/middlewares/*"]
