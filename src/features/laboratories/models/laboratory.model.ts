@@ -17,7 +17,4 @@ const LaboratorySchema = new Schema<Laboratory>(
 // Índice compuesto para optimizar búsquedas por userId y estado activo
 LaboratorySchema.index({ userId: 1, isActive: 1 })
 
-// Índice para búsquedas por nombre (opcional, si se realizan búsquedas frecuentes por nombre)
-LaboratorySchema.index({ name: 1 })
-
 export const LaboratoryModel = model('Laboratory', LaboratorySchema)
