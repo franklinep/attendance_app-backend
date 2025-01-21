@@ -1,6 +1,6 @@
 // src/api/v1/routes/attendance.routes.ts
 import { Router } from 'express'
-import { registerAttendance } from '@attendance/attendance.controllers'
+import { registerAttendance, generateQRToken } from '@attendance/attendance.controllers'
 import { authenticateToken } from '@middlewares/auth.middleware'
 
 const route = Router()
@@ -10,5 +10,10 @@ export default (app: Router): void => {
   route.post('/register',
     authenticateToken,
     registerAttendance
+  )
+
+  route.get('/qr/:laboratoryId',
+    authenticateToken,
+    generateQRToken
   )
 }
